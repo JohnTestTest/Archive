@@ -1,0 +1,314 @@
+Building configuration...
+
+Current configuration : 9176 bytes
+!
+! Last configuration change at 12:57:30 EET Tue May 12 2020 by john
+!
+version 15.1
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname R26
+!
+boot-start-marker
+boot-end-marker
+!
+!
+vrf definition MGMT
+ !
+ address-family ipv4
+ exit-address-family
+!
+!
+username john privilege 15 password 0 cisco
+no aaa new-model
+clock timezone EET 2 0
+no ipv6 cef
+ipv6 multicast rpf use-bgp
+!
+no ip domain-lookup
+ip domain-name cisco.com
+ip cef
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+ip ssh version 2
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 10.10.10.26 255.255.255.255
+ ip ospf 1 area 0
+!
+interface Ethernet0/0
+ no switchport
+ vrf forwarding MGMT
+ ip address 192.168.31.126 255.255.255.0
+!
+interface Ethernet0/1
+ no switchport
+ ip unnumbered Loopback0
+ ip ospf network point-to-point
+ ip ospf 1 area 0
+!
+interface Ethernet0/2
+ no switchport
+ ip unnumbered Loopback0
+ ip ospf network point-to-point
+ ip ospf 1 area 0
+!
+interface Ethernet0/3
+ no switchport
+ ip unnumbered Loopback0
+ ip ospf network point-to-point
+ ip ospf 1 area 0
+!
+interface Ethernet1/0
+ duplex auto
+!
+interface Ethernet1/1
+ duplex auto
+!
+interface Ethernet1/2
+ duplex auto
+!
+interface Ethernet1/3
+ duplex auto
+!
+router ospf 1
+ router-id 10.10.10.26
+!
+router bgp 65001
+ bgp log-neighbor-changes
+ neighbor 10.10.10.1 remote-as 65001
+ neighbor 10.10.10.1 password cisco
+ neighbor 10.10.10.1 update-source Loopback0
+ neighbor 10.10.10.1 timers 10 30
+ neighbor 10.10.10.2 remote-as 65001
+ neighbor 10.10.10.2 password cisco
+ neighbor 10.10.10.2 update-source Loopback0
+ neighbor 10.10.10.2 timers 10 30
+ neighbor 10.10.10.3 remote-as 65001
+ neighbor 10.10.10.3 password cisco
+ neighbor 10.10.10.3 update-source Loopback0
+ neighbor 10.10.10.3 timers 10 30
+ neighbor 10.10.10.4 remote-as 65001
+ neighbor 10.10.10.4 password cisco
+ neighbor 10.10.10.4 update-source Loopback0
+ neighbor 10.10.10.4 timers 10 30
+ neighbor 10.10.10.5 remote-as 65001
+ neighbor 10.10.10.5 password cisco
+ neighbor 10.10.10.5 update-source Loopback0
+ neighbor 10.10.10.5 timers 10 30
+ neighbor 10.10.10.6 remote-as 65001
+ neighbor 10.10.10.6 password cisco
+ neighbor 10.10.10.6 update-source Loopback0
+ neighbor 10.10.10.6 timers 10 30
+ neighbor 10.10.10.7 remote-as 65001
+ neighbor 10.10.10.7 password cisco
+ neighbor 10.10.10.7 update-source Loopback0
+ neighbor 10.10.10.7 timers 10 30
+ neighbor 10.10.10.8 remote-as 65001
+ neighbor 10.10.10.8 password cisco
+ neighbor 10.10.10.8 update-source Loopback0
+ neighbor 10.10.10.8 timers 10 30
+ neighbor 10.10.10.9 remote-as 65001
+ neighbor 10.10.10.9 password cisco
+ neighbor 10.10.10.9 update-source Loopback0
+ neighbor 10.10.10.9 timers 10 30
+ neighbor 10.10.10.10 remote-as 65001
+ neighbor 10.10.10.10 password cisco
+ neighbor 10.10.10.10 update-source Loopback0
+ neighbor 10.10.10.10 timers 10 30
+ neighbor 10.10.10.11 remote-as 65001
+ neighbor 10.10.10.11 password cisco
+ neighbor 10.10.10.11 update-source Loopback0
+ neighbor 10.10.10.11 timers 10 30
+ neighbor 10.10.10.12 remote-as 65001
+ neighbor 10.10.10.12 password cisco
+ neighbor 10.10.10.12 update-source Loopback0
+ neighbor 10.10.10.12 timers 10 30
+ neighbor 10.10.10.13 remote-as 65001
+ neighbor 10.10.10.13 password cisco
+ neighbor 10.10.10.13 update-source Loopback0
+ neighbor 10.10.10.13 timers 10 30
+ neighbor 10.10.10.14 remote-as 65001
+ neighbor 10.10.10.14 password cisco
+ neighbor 10.10.10.14 update-source Loopback0
+ neighbor 10.10.10.14 timers 10 30
+ neighbor 10.10.10.15 remote-as 65001
+ neighbor 10.10.10.15 password cisco
+ neighbor 10.10.10.15 update-source Loopback0
+ neighbor 10.10.10.15 timers 10 30
+ neighbor 10.10.10.16 remote-as 65001
+ neighbor 10.10.10.16 password cisco
+ neighbor 10.10.10.16 update-source Loopback0
+ neighbor 10.10.10.16 timers 10 30
+ neighbor 10.10.10.17 remote-as 65001
+ neighbor 10.10.10.17 password cisco
+ neighbor 10.10.10.17 update-source Loopback0
+ neighbor 10.10.10.17 timers 10 30
+ neighbor 10.10.10.18 remote-as 65001
+ neighbor 10.10.10.18 password cisco
+ neighbor 10.10.10.18 update-source Loopback0
+ neighbor 10.10.10.18 timers 10 30
+ neighbor 10.10.10.19 remote-as 65001
+ neighbor 10.10.10.19 password cisco
+ neighbor 10.10.10.19 update-source Loopback0
+ neighbor 10.10.10.19 timers 10 30
+ neighbor 10.10.10.20 remote-as 65001
+ neighbor 10.10.10.20 password cisco
+ neighbor 10.10.10.20 update-source Loopback0
+ neighbor 10.10.10.20 timers 10 30
+ neighbor 10.10.10.21 remote-as 65001
+ neighbor 10.10.10.21 password cisco
+ neighbor 10.10.10.21 update-source Loopback0
+ neighbor 10.10.10.21 timers 10 30
+ neighbor 10.10.10.22 remote-as 65001
+ neighbor 10.10.10.22 password cisco
+ neighbor 10.10.10.22 update-source Loopback0
+ neighbor 10.10.10.22 timers 10 30
+ neighbor 10.10.10.23 remote-as 65001
+ neighbor 10.10.10.23 password cisco
+ neighbor 10.10.10.23 update-source Loopback0
+ neighbor 10.10.10.23 timers 10 30
+ neighbor 10.10.10.24 remote-as 65001
+ neighbor 10.10.10.24 password cisco
+ neighbor 10.10.10.24 update-source Loopback0
+ neighbor 10.10.10.24 timers 10 30
+ neighbor 10.10.10.25 remote-as 65001
+ neighbor 10.10.10.25 password cisco
+ neighbor 10.10.10.25 update-source Loopback0
+ neighbor 10.10.10.25 timers 10 30
+ neighbor 10.10.10.27 remote-as 65001
+ neighbor 10.10.10.27 password cisco
+ neighbor 10.10.10.27 update-source Loopback0
+ neighbor 10.10.10.27 timers 10 30
+ neighbor 10.10.10.28 remote-as 65001
+ neighbor 10.10.10.28 password cisco
+ neighbor 10.10.10.28 update-source Loopback0
+ neighbor 10.10.10.28 timers 10 30
+ neighbor 10.10.10.29 remote-as 65001
+ neighbor 10.10.10.29 password cisco
+ neighbor 10.10.10.29 update-source Loopback0
+ neighbor 10.10.10.29 timers 10 30
+ neighbor 10.10.10.30 remote-as 65001
+ neighbor 10.10.10.30 password cisco
+ neighbor 10.10.10.30 update-source Loopback0
+ neighbor 10.10.10.30 timers 10 30
+ neighbor 10.10.10.31 remote-as 65001
+ neighbor 10.10.10.31 password cisco
+ neighbor 10.10.10.31 update-source Loopback0
+ neighbor 10.10.10.31 timers 10 30
+ neighbor 10.10.10.32 remote-as 65001
+ neighbor 10.10.10.32 password cisco
+ neighbor 10.10.10.32 update-source Loopback0
+ neighbor 10.10.10.32 timers 10 30
+ neighbor 10.10.10.33 remote-as 65001
+ neighbor 10.10.10.33 password cisco
+ neighbor 10.10.10.33 update-source Loopback0
+ neighbor 10.10.10.33 timers 10 30
+ neighbor 10.10.10.34 remote-as 65001
+ neighbor 10.10.10.34 password cisco
+ neighbor 10.10.10.34 update-source Loopback0
+ neighbor 10.10.10.34 timers 10 30
+ neighbor 10.10.10.35 remote-as 65001
+ neighbor 10.10.10.35 password cisco
+ neighbor 10.10.10.35 update-source Loopback0
+ neighbor 10.10.10.35 timers 10 30
+ neighbor 10.10.10.36 remote-as 65001
+ neighbor 10.10.10.36 password cisco
+ neighbor 10.10.10.36 update-source Loopback0
+ neighbor 10.10.10.36 timers 10 30
+ neighbor 10.10.10.37 remote-as 65001
+ neighbor 10.10.10.37 password cisco
+ neighbor 10.10.10.37 update-source Loopback0
+ neighbor 10.10.10.37 timers 10 30
+ neighbor 10.10.10.38 remote-as 65001
+ neighbor 10.10.10.38 password cisco
+ neighbor 10.10.10.38 update-source Loopback0
+ neighbor 10.10.10.38 timers 10 30
+ neighbor 10.10.10.39 remote-as 65001
+ neighbor 10.10.10.39 password cisco
+ neighbor 10.10.10.39 update-source Loopback0
+ neighbor 10.10.10.39 timers 10 30
+ neighbor 10.10.10.40 remote-as 65001
+ neighbor 10.10.10.40 password cisco
+ neighbor 10.10.10.40 update-source Loopback0
+ neighbor 10.10.10.40 timers 10 30
+ neighbor 10.10.10.41 remote-as 65001
+ neighbor 10.10.10.41 password cisco
+ neighbor 10.10.10.41 update-source Loopback0
+ neighbor 10.10.10.41 timers 10 30
+ neighbor 10.10.10.42 remote-as 65001
+ neighbor 10.10.10.42 password cisco
+ neighbor 10.10.10.42 update-source Loopback0
+ neighbor 10.10.10.42 timers 10 30
+ neighbor 10.10.10.43 remote-as 65001
+ neighbor 10.10.10.43 password cisco
+ neighbor 10.10.10.43 update-source Loopback0
+ neighbor 10.10.10.43 timers 10 30
+ neighbor 10.10.10.44 remote-as 65001
+ neighbor 10.10.10.44 password cisco
+ neighbor 10.10.10.44 update-source Loopback0
+ neighbor 10.10.10.44 timers 10 30
+ neighbor 10.10.10.45 remote-as 65001
+ neighbor 10.10.10.45 password cisco
+ neighbor 10.10.10.45 update-source Loopback0
+ neighbor 10.10.10.45 timers 10 30
+ neighbor 10.10.10.46 remote-as 65001
+ neighbor 10.10.10.46 password cisco
+ neighbor 10.10.10.46 update-source Loopback0
+ neighbor 10.10.10.46 timers 10 30
+ neighbor 10.10.10.47 remote-as 65001
+ neighbor 10.10.10.47 password cisco
+ neighbor 10.10.10.47 update-source Loopback0
+ neighbor 10.10.10.47 timers 10 30
+ neighbor 10.10.10.48 remote-as 65001
+ neighbor 10.10.10.48 password cisco
+ neighbor 10.10.10.48 update-source Loopback0
+ neighbor 10.10.10.48 timers 10 30
+ neighbor 10.10.10.49 remote-as 65001
+ neighbor 10.10.10.49 password cisco
+ neighbor 10.10.10.49 update-source Loopback0
+ neighbor 10.10.10.49 timers 10 30
+ neighbor 10.10.10.50 remote-as 65001
+ neighbor 10.10.10.50 password cisco
+ neighbor 10.10.10.50 update-source Loopback0
+ neighbor 10.10.10.50 timers 10 30
+!
+!
+no ip http server
+!
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ login local
+ transport input all
+!
+end
