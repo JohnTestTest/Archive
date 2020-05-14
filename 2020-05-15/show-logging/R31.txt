@@ -1,0 +1,66 @@
+Syslog logging: enabled (0 messages dropped, 0 messages rate-limited, 0 flushes, 0 overruns, xml disabled, filtering disabled)
+
+No Active Message Discriminator.
+
+
+
+No Inactive Message Discriminator.
+
+
+    Console logging: level debugging, 358 messages logged, xml disabled,
+                     filtering disabled
+    Monitor logging: level debugging, 0 messages logged, xml disabled,
+                     filtering disabled
+    Buffer logging:  level debugging, 358 messages logged, xml disabled,
+                    filtering disabled
+    Exception Logging: size (4096 bytes)
+    Count and timestamp logging messages: disabled
+    Persistent logging: disabled
+    Trap logging: level informational, 361 message lines logged
+        Logging Source-Interface:       VRF Name:
+
+Log Buffer (4096 bytes):
+Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:19.732: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:22.038: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:24.407: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:26.636: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:29.104: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:31.397: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:33.614: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:35.948: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:38.145: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:40.553: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:42.892: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:45.248: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:47.606: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:49.935: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:52.236: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:54.529: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:56.587: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:46:58.953: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:01.285: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:03.692: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:06.024: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:08.557: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:10.793: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:13.020: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:15.195: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:17.595: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:19.822: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:21.983: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:24.332: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:26.577: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:28.975: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:31.237: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:33.468: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:35.847: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:38.398: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:40.563: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:43.062: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:45.273: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:47.455: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:49.844: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:52.102: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:54.075: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
+*May 11 20:47:55.370: %SYS-5-CONFIG_I: Configured from console by john on vty0 (192.168.31.1)
